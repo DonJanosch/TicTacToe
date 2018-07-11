@@ -18,3 +18,15 @@ button{
   text-align: center;
   width: 200px;
 }
+
+#player_1_name{
+  text-align: center;
+  color: white;
+  background-color: blue;
+}
+
+#player_2_name{
+  text-align: center;
+  color: white;
+  background-color: red;
+}

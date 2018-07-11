@@ -28,6 +28,7 @@ function resetGame(){
 
 function anouncePlayer(){
   $('#player_nr').text(player_names[rounds%2]);
+  $('#player_nr').css('color',player_color_code[rounds%2]);
 }
 
 function getPlayerNames(){
