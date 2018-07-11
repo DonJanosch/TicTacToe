@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="connectfour.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <title>Connect four - Game</title>
+  </head>
+  <body>
+    <div class="container" align="center">
+      <h1>Game of ConnectFour!</h1>
+      <p>Try to connect four of your stones in a line!
+        You know the game!</p>
+        <div class="select_names">
+          <input type="text" id="player_1_name" placeholder="blue">
+          <input type="text" id="player_2_name" placeholder="red">
+          <br>
+          <input type="submit" class="btn btn-default" id="submit_names" value="Save player names">
+          <br>
+        </div>
+      <input type="button" id="btn_reset" class="btn btn-default" value="Reset Game">
+    </div>
+
+    <div class="board" align="center">
+      <table align="center">
+        <tr align="center">
+          <p>Player in turn: <span id="player_nr">blue</span></p>
+        </tr>
+        <tr><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td></tr>
+        <tr><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td></tr>
+        <tr><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td></tr>
+        <tr><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td></tr>
+        <tr><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td></tr>
+        <tr><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td><td><button type="button"></button></td></tr>
+      </table>
+    </div>
+
+  </body>
+  <script src="connectfour.js">
+
+  </script>
+</html>
