@@ -1,11 +1,15 @@
-var board = $('button');
-var rounds = 0;
-var ref_color = $(board).eq(1).css('background-color');
-var player_color_code = {0:'blue',1:'red'};
-var p1_default = 'blue';
-var p2_default = 'red';
-var player_names = {0:p1_default,1:p2_default};
+var board = $('button'); //Read the buttons as game-grid
+var rounds = 0; //Counter to keep track of the played turns and to determine who is in turn
+var ref_color = $(board).eq(1).css('background-color'); //Read the refference-color... might be changed by css
+var p1_color = 'blue'; //Define player 1 color
+var p2_color = 'red'; //Define player 2 color
+var player_names = {0:p1_color,1:p2_color}; //Make a look-up object to find the player names, initially they are the colors
+var player_color_code = {0:p1_color,1:p2_color}; //The color code to use
 
+$('#player_1_name').css('background-color', p1_color); //Initially set the background color of the player 1 name-input
+$('#player_1_name').attr('placeholder',player_color_code[0]+'-player name');
+$('#player_2_name').css('background-color', p2_color); //Initially set the background color of the player 2 name-input
+$('#player_2_name').attr('placeholder',player_color_code[1]+'-player name');
 $(board).click(pickColor);
 $('#btn_reset').click(resetGame);
 $('#submit_names').click(getPlayerNames);
@@ -37,12 +41,12 @@ function getPlayerNames(){
   if (p1_name.length > 0){
     player_names['0'] = p1_name;
   }else{
-    player_names['0'] = p1_default;
+    player_names['0'] = p1_color;
   }
   if (p2_name.length > 0){
     player_names['1'] = p2_name;
   }else{
-    player_names['1'] = p2_default;
+    player_names['1'] = p2_color;
   }
   $('.select_names').fadeOut(500);
   anouncePlayer();
